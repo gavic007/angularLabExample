@@ -34,6 +34,7 @@ app.use(express.static('bower_components'));
 
 app.get('/kittens', function(req, res){
     res.sendFile('public/views/kittens.html', options);
+    res.send("Page under construction!");
 });
 
 app.get('/about', function(req, res){
