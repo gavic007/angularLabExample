@@ -1,0 +1,25 @@
+img {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style for the navbar on the home page */
+#navBar {
+    margin: 20px 0 20px 0;
+    padding: 10px;
+    padding-left: 50px;
+    background-color: lightblue;
+}
+
+.blockCenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.floatRight {
+    float: right;
+}
