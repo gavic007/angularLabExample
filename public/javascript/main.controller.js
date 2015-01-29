@@ -75,4 +75,8 @@ var mainApp = angular.module("mainApp", []);
             $scope.data1.splice(index, 1);
         };
 
+        $scope.calculateTotalGpa = function(){
+            return calculateGPA("A",3);
+        }
+
     });
