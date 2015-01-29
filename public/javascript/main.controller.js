@@ -93,7 +93,26 @@ var mainApp = angular.module("mainApp", []);
 
         $scope.colorGpa = function(){
             var gpa = $scope.calculateTotalGpa();
-            
+            if(gpa == 4){
+                return {"color":"Purple"}
+
+            }
+            else if(gpa < 4 && gpa >= 3){
+                return {"color":"Green"}
+
+            }
+           else  if(gpa < 3 && gpa >= 2){
+                return {"color":"Blue"}
+
+            }
+            else if(gpa < 2 && gpa >= 1){
+                return {"color":"Orange"}
+
+            }
+            else if(gpa < 1 && gpa >= 0){
+                return {"color":"Red"}
+
+            }
 
         }
     });
