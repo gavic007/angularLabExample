@@ -45,7 +45,7 @@ app.get('/', function(req, res){
     res.sendFile('public/views/index.html', options);
 });
 
-app.get('/', function(req, res){
+app.get('/gpa', function(req, res){
     res.sendFile('public/views/gpa.html', options);
 });
 
@@ -62,7 +62,3 @@ var server = app.listen(9000, function(){
 
    console.log("server listening on http://%s:%s", host, port);
 });
-
-
-
-
