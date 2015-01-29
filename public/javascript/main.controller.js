@@ -61,6 +61,23 @@ var mainApp = angular.module("mainApp", []);
         ];
 
         $scope.addGpaData = function(){
+            if($scope.textFields.Field2 == "A" ||
+               $scope.textFields.Field2 == "B" ||
+               $scope.textFields.Field2 == "C" ||
+               $scope.textFields.Field2 == "D" ||
+               $scope.textFields.Field2 == "F") {
+
+            }else{
+                alert("THIS IS NOT A VALID GRADE!");
+                return;
+            }
+            if($scope.textFields.Field3 > 0 && $scope.textFields.Field3 < 5) {
+
+            }else{
+                alert("THIS IS NOT A VALID CREDIT AMOUNT!");
+                return;
+            }
+
             if($scope.textFields.Field1.length >= 1 && $scope.textFields.Field2.length >= 1 && $scope.textFields.Field3.length >= 1) {
                 $scope.data1.push({class:$scope.textFields.Field1, grade: $scope.textFields.Field2, credit: $scope.textFields.Field3} );
                 $scope.textFields = {
