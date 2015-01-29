@@ -76,7 +76,24 @@ var mainApp = angular.module("mainApp", []);
         };
 
         $scope.calculateTotalGpa = function(){
-            return calculateGPA("A",3);
+            if($scope.data1.length == 0){
+                return 0;
+            }
+            var totalScore = 0;
+            var totalCredits = 0;
+            for (i = 0; i < $scope.data1.length; i++){
+                var grade = $scope.data1[i].grade;
+                var credit = parseInt($scope.data1[i].credit);
+                var gradeNumber = gradeToNumber(grade);
+                totalScore += credit*gradeNumber;
+                totalCredits += credit;
+            }
+            return (totalScore/totalCredits);
         }
 
+        $scope.colorGpa = function(){
+            var gpa = $scope.calculateTotalGpa();
+            
+
+        }
     });

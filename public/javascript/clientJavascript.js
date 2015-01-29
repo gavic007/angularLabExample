@@ -29,7 +29,7 @@ var returnKittens = function(){
     return "kittens";
 };
 
-var calculateGPA = function(grade, credit){
+var gradeToNumber = function(grade){
     var numGrade = 0;
     if (grade == 'A') {
         numGrade = 4;
@@ -43,8 +43,8 @@ var calculateGPA = function(grade, credit){
     if (grade == 'D') {
         numGrade = 1;
     }
-    return (numGrade * credit) / credit;
-};
-var totalGPA = function(GPA1, GPA2, GPA3){
-    return (GPA1 + GPA2 + GPA3) / 3;
+    if (grade == 'F') {
+        numGrade = 0;
+    }
+    return (numGrade);
 };

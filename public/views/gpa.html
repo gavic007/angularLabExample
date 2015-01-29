@@ -27,7 +27,7 @@
                 <input ng-model="textFields.Field2" type="text" size="20" placeholder="Class Letter Grade">
                 <input ng-model="textFields.Field3" type="text" size="20" placeholder="Class Credit Amount">
                 <input type="submit" value="submit" class="btn btn-primary">
-                <span class="floatRight">Current GPA: {{calculateTotalGpa()}}</span>
+                <span ng-style="colorGpa()" class="floatRight">Current GPA: {{calculateTotalGpa()}}</span>
             </form>
 
         </li>
