@@ -8,7 +8,8 @@ var mainApp = angular.module("mainApp", []);
             {text: "Home", link: '/'},
             {text: "About", link: '/about'},
             {text: "Kittens", link: '/kittens'},
-            {text: "404 Page", link: '/wefwrtbertbeb'}
+            {text: "404 Page", link: '/wefwrtbertbeb'},
+            {test: "GPA Calculator", link: '/gpa'}
         ];
     });
 
@@ -45,4 +46,14 @@ var mainApp = angular.module("mainApp", []);
        $scope.itemsInList = function(){
            return $scope.data.length;
        };
+    });
+
+    mainApp.controller('gpaCtrl', function($scope) {
+        console.log("controller loaded!");
+
+
+        $scope.data1 = [
+
+        ];
+
     });
