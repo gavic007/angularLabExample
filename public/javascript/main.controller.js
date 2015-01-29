@@ -51,9 +51,24 @@ var mainApp = angular.module("mainApp", []);
     mainApp.controller('gpaCtrl', function($scope) {
         console.log("controller loaded!");
 
-
+        $scope.textFields = {
+            Field1:"",
+            Field2:"",
+            Field3:""
+        };
         $scope.data1 = [
 
         ];
+
+        $scope.addData1 = function(){
+            if($scope.textFields.Field1.length >= 1) {
+                $scope.data1.push({class:$scope.textFields.Field1, grade: $scope.textFields.Field2, credit: $scope.textFields.Field3} );
+                $scope.textFields.Field1 = "";
+            }
+        };
+
+        $scope.removeData1 = function(index){
+            $scope.data.splice(index, 1);
+        };
 
     });
