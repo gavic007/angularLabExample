@@ -60,15 +60,19 @@ var mainApp = angular.module("mainApp", []);
 
         ];
 
-        $scope.addData1 = function(){
-            if($scope.textFields.Field1.length >= 1) {
+        $scope.addGpaData = function(){
+            if($scope.textFields.Field1.length >= 1 && $scope.textFields.Field2.length >= 1 && $scope.textFields.Field3.length >= 1) {
                 $scope.data1.push({class:$scope.textFields.Field1, grade: $scope.textFields.Field2, credit: $scope.textFields.Field3} );
-                $scope.textFields.Field1 = "";
+                $scope.textFields = {
+                    Field1:"",
+                    Field2:"",
+                    Field3:""
+                };
             }
         };
 
-        $scope.removeData1 = function(index){
-            $scope.data.splice(index, 1);
+        $scope.removeGpaData = function(index){
+            $scope.data1.splice(index, 1);
         };
 
     });

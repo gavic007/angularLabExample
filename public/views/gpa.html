@@ -22,7 +22,7 @@
     <ul class="list-group">
         <li class="list-group-item">
 
-            <form ng-submit="addData1()">
+            <form ng-submit="addGpaData()">
                 <input ng-model="textFields.Field1" type="text" size="20" placeholder="Class Name">
                 <input ng-model="textFields.Field2" type="text" size="20" placeholder="Class Letter Grade">
                 <input ng-model="textFields.Field3" type="text" size="20" placeholder="Class Credit Amount">
@@ -31,7 +31,7 @@
             </form>
 
         </li>
-        <li class="list-group-item" ng-repeat="info in data1">Class: {{info.class}}, Grade: {{info.grade}}, Credits: {{info.credit}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="removeData($index)"></span></li>
+        <li class="list-group-item" ng-repeat="info in data1">Class: {{info.class}} Grade: {{info.grade}} Credits: {{info.credit}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="removeGpaData($index)"></span></li>
     </ul>
 </div>
 
