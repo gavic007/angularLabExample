@@ -13,9 +13,21 @@
     <script type="text/javascript" src="angularjs/angular.js"></script>
     <script type="text/javascript" src="javascript/main.controller.js"></script>
 </head>
-<body>
+<body ng-app="mainApp">
+<div ng-include="'views/navbar.html'"></div>
+<hr>
 
-
+<form method="post" action="/GPA">
+    <input name="letter1" type="text" width="20" placeholder="First Class Grade">
+    <input name="letter2" type="text" width="20" placeholder="Second Class Grade">
+    <input name="letter3" type="text" width="20" placeholder="Third Class Grade">
+    <br>
+    <input name="cred1" type="text" width="20" placeholder="First Cred">
+    <input name="cred2" type="text" width="20" placeholder="Second Cred">
+    <input name="cred3" type="text" width="20" placeholder="Third Cred">
+    <br>
+    <input type="submit" value="Submit">
+</form>
 
 
 </body>
