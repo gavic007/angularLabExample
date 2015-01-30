@@ -71,7 +71,7 @@ var mainApp = angular.module("mainApp", []);
                 alert("THIS IS NOT A VALID GRADE!");
                 return;
             }
-            if($scope.textFields.Field3 > 0 && $scope.textFields.Field3 < 5) {
+            if($scope.textFields.Field3 > 0 && $scope.textFields.Field3 <= 5) {
 
             }else{
                 alert("THIS IS NOT A VALID CREDIT AMOUNT!");

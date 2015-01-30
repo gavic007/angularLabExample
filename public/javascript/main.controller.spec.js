@@ -63,4 +63,46 @@ describe('Testing controller: navbarCtrl', function(){
     it('should contain pages', function(){
       expect(scope.pages.length > 0).toEqual(true);
     });
+
 });
+
+//====Testing GPA Functions=======================================
+describe('Testing GPA Functions: gpaCtrl', function(){
+
+    beforeEach(module('mainApp'));
+
+    var gpaCtrl, scope;
+
+    beforeEach(inject(function($controller, $rootScope) {
+        scope = $rootScope.$new();
+        gpaCtrl = $controller('gpaCtrl', {
+            $scope: scope
+        });
+    }));
+
+    it('should send an error', function(){
+        scope.textFields.Field2= "fred";
+        expect(scope.addGpaData()).toEqual(alert("THIS IS NOT A VALID GRADE!"))
+    });
+
+    it('should send an error', function(){
+        scope.textFields.Field3= "george";
+        expect(scope.addGpaData()).toEqual(alert("THIS IS NOT A VALID CREDIT VALUE!"))
+    });
+
+    it('should send an error', function(){
+        scope.textFields.Field2= 7;
+        expect(scope.addGpaData()).toEqual(alert("THIS IS NOT A VALID GRADE!"))
+    });
+
+    it('should equal 4', function(){
+        scope.data1.push({class: "test class", grade: "A", credit: 5})
+        expect(scope.calculateTotalGpa()).toEqual(4);
+    });
+
+    it('should equal red', function(){
+        scope.data1.push({class: "test class", grade: "F", credit: 5})
+        expect(scope.colorGpa()).toEqual({"color":"Red"});
+    });
+
+})
